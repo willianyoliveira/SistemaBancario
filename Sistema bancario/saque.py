@@ -9,6 +9,6 @@ def saq(saldo, saques, limite_saque, extrato):
 ''')
             saques = saques + 1
         else:
-            print("Não á limite disponível para o saldo")
+            print("Não há limite disponível para o saldo")
     else:
             print("O número de saques diários permitidos foi alcançado")   
