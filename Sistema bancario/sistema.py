@@ -1,3 +1,4 @@
+from deposito import depo
 saldo = 0
 deposito = ""
 saques = 0
@@ -13,13 +14,9 @@ while True:
           q = Sair''')
     operacao = input()
     if operacao == "d":
-        print(f"Qual valor deseja depositar?")
-        d =  float(input())
-        extrato = extrato + (f'''Foi realizado um depósito no valor de {d:.2f}
-''')
-        saldo = saldo + d
-        print((f'''Foi realizado um depósito no valor de {d}
-               Saldo atual: {saldo}'''))
+        saldoAtual = depo(saldo, extrato)  
+        extrato = extrato + saldoAtual[1]
+        saldo = saldo +  saldoAtual[0]
     if operacao == "s": 
         if saques < 3:
             print("Qual valor deseja sacar?")
